@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entradas por Autor</title>
+</head>
+<body>
+    <h1>Entradas de {{ autor.nombre }}</h1>
+    <ul>
+        {% for entrada in entradas %}
+            <li>
+                <h2>{{ entrada.titulo }}</h2>
+                <p>{{ entrada.contenido }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'pagina_inicio' %}">Volver a la página de inicio</a>
+</body>
+</html>
